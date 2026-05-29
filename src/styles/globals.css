@@ -1,0 +1,340 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #635bff;
+  --primary-foreground: #ffffff;
+  --secondary: #f8fafc;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #ffffff;
+  --input-background: #ffffff;
+  --input-border: #e2e8f0;
+  --input-border-focus: #635bff;
+  --switch-background: #cbd5e1;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #635bff;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --chart-1: #635bff;
+  --chart-2: #00d4aa;
+  --chart-3: #ff5a5f;
+  --chart-4: #ffc107;
+  --chart-5: #6f42c1;
+  --radius: 0.5rem;
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #635bff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #334155;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #635bff;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+  --popover: #1e293b;
+  --popover-foreground: #f8fafc;
+  --primary: #635bff;
+  --primary-foreground: #ffffff;
+  --secondary: #334155;
+  --secondary-foreground: #f8fafc;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #334155;
+  --accent-foreground: #f8fafc;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #334155;
+  --input-background: #334155;
+  --input-border: #475569;
+  --input-border-focus: #635bff;
+  --ring: #635bff;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  --chart-1: #635bff;
+  --chart-2: #00d4aa;
+  --chart-3: #ff5a5f;
+  --chart-4: #ffc107;
+  --chart-5: #6f42c1;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #635bff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #334155;
+  --sidebar-ring: #635bff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-input-border: var(--input-border);
+  --color-input-border-focus: var(--input-border-focus);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Enhanced focus styles for better accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+
+  /* Button improvements */
+  button:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+
+  /* Input improvements */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* Enhanced scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--muted);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--muted-foreground);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--foreground);
+  }
+}
+
+/**
+ * Enhanced typography system based on Stripe's design principles
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      color: var(--foreground);
+    }
+
+    h2 {
+      font-size: 1.875rem;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      color: var(--foreground);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.33;
+      letter-spacing: -0.025em;
+      color: var(--foreground);
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    h5 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.44;
+      color: var(--foreground);
+    }
+
+    h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--foreground);
+    }
+
+    p {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--foreground);
+    }
+
+    label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--foreground);
+    }
+
+    button {
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.005em;
+    }
+
+    input, textarea, select {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* Text utility overrides */
+    .text-xs, small {
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .text-base {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.44;
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 1.33;
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+      line-height: 1.27;
+    }
+  }
+}
+
+/* Enhanced animation and transition utilities */
+@layer utilities {
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+  .transition-smooth {
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card-shadow-hover:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .focus-ring:focus-within {
+    box-shadow: 0 0 0 3px rgb(99 91 255 / 0.1);
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Ensure proper Inter font loading */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
