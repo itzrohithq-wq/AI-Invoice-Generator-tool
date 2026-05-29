@@ -16,8 +16,11 @@ function figmaAssetResolver() {
   }
 }
 
+const isVercel = process.env.VERCEL === '1' || process.env.VERCEL === 'true';
+const basePath = isVercel ? '/' : '/AI-Invoice-Generator-tool/';
+
 export default defineConfig({
-  base: '/AI-Invoice-Generator-tool/',
+  base: basePath,
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
